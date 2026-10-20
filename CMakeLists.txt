@@ -68,3 +68,21 @@ add_test(
     NAME ConcurrentStressTest
     COMMAND concurrent_stress_test
 )
+add_executable(concurrent_skip_test
+    tests/concurrent_skip_test.cpp
+)
+target_link_libraries(concurrent_skip_test PRIVATE realtime_core)
+add_test(NAME ConcurrentSkipTest COMMAND concurrent_skip_test)
+
+add_executable(skip_frame_test
+    tests/skip_frame_test.cpp
+)
+target_link_libraries(skip_frame_test PRIVATE realtime_core)
+add_test(NAME SkipFrameTest COMMAND skip_frame_test)
+
+add_executable(skip_race_test
+    tests/skip_race_test.cpp
+)
+target_link_libraries(skip_race_test PRIVATE realtime_core)
+add_test(NAME SkipRaceTest COMMAND skip_race_test)
+
