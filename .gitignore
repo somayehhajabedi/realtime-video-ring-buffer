@@ -1,0 +1,17 @@
+build/
+build-*/
+.vscode/
+.idea/
+*.o
+*.a
+*.so
+*.log
+
+# Locally compiled executables
+/atomic_order_benchmark
+/concurrent_skip_test
+/concurrent_stress_test
+/concurrent_stress_tsan
+/decode
+/skip_frame_test
+/skip_race_test
